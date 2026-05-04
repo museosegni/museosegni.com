@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 214 50% 13%;
+    --foreground: 0 0% 100%;
+    --card: 214 50% 11%;
+    --card-foreground: 0 0% 100%;
+    --popover: 214 50% 11%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 33 56% 51%;
+    --primary-foreground: 214 50% 13%;
+    --secondary: 214 45% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 214 45% 22%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 33 56% 51%;
+    --accent-foreground: 214 50% 13%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 33 56% 51%;
+    --input: 214 45% 22%;
+    --ring: 33 56% 51%;
+    --radius: 0.5rem;
+    --sidebar-background: 214 50% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 33 56% 51%;
+    --sidebar-primary-foreground: 214 50% 13%;
+    --sidebar-accent: 214 45% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 33 56% 51%;
+    --sidebar-ring: 33 56% 51%;
+  }
+
+  body {
+    @apply bg-museum-dark text-white font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  .neon-card-glow {
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+
+  .neon-card-glow:hover {
+    box-shadow: 0 0 15px -3px hsla(33, 80%, 60%, 0.4);
+    border-color: hsla(33, 80%, 60%, 0.3);
+  }
+}
