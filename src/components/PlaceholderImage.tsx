@@ -1,8 +1,7 @@
-import React from 'react';
 
 interface PlaceholderImageProps {
   label: string;
-  aspectRatio?: '16/9' | '4/3' | '1/1';
+  aspectRatio?: '16/9' | '4/3' | '1/1' | '21/9';
   width?: string;
   height?: string;
   className?: string;
@@ -19,6 +18,7 @@ const PlaceholderImage: React.FC<PlaceholderImageProps> = ({
     '16/9': 'aspect-video',
     '4/3': 'aspect-[4/3]',
     '1/1': 'aspect-square',
+    '21/9': 'aspect-[21/9]',
   };
 
   return (
@@ -32,6 +32,7 @@ const PlaceholderImage: React.FC<PlaceholderImageProps> = ({
           {aspectRatio === '16/9' && '1920 x 1080px'}
           {aspectRatio === '4/3' && '1200 x 900px'}
           {aspectRatio === '1/1' && '1080 x 1080px'}
+          {aspectRatio === '21/9' && '2100 x 900px'}
         </div>
         <div className="text-white/50 text-sm font-body">{label}</div>
       </div>
