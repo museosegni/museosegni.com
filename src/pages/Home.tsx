@@ -75,7 +75,12 @@ export default function Home() {
     <Layout>
       {/* Hero */}
       <section className="relative min-h-[500px] sm:aspect-video">
-        <PlaceholderImage label="Hero Home - 1920x1080" aspectRatio="16/9" className="absolute inset-0 w-full h-full" />
+        <img 
+          src="/img/museo-archeologico-comunale-di-segni-sede.avif" 
+          alt="Sede del Museo Archeologico Comunale di Segni"
+          title="Museo Archeologico Comunale di Segni - Sede"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-museum-dark via-museum-dark/60 to-transparent" />
         <div className="absolute inset-0 flex items-end">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-12 sm:pb-16 w-full">
