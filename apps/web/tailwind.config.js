@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -57,8 +57,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        heading: ['"Cormorant"', 'serif'],
-        body: ['"Libre Franklin"', 'sans-serif'],
+        heading: ['var(--font-cormorant)', 'serif'],
+        body: ['var(--font-libre-franklin)', 'sans-serif'],
       },
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",

@@ -1,0 +1,15 @@
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+.env*.local
