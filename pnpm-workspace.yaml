@@ -1,0 +1,10 @@
+packages:
+  - "apps/*"
+
+# Dipendenze native di cui pnpm può eseguire gli script di build (necessarie a
+# Payload/sharp per la conversione immagini).
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
