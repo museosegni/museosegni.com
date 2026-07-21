@@ -33,8 +33,6 @@ ENV NODE_ENV production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-COPY --from=builder /app/apps/cms/public ./apps/cms/public
-
 RUN mkdir -p apps/cms/.next
 RUN chown nextjs:nodejs apps/cms/.next
 
