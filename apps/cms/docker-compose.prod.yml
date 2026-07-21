@@ -21,7 +21,11 @@ services:
       - pgdata:/var/lib/postgresql/data
 
   cms:
-    build: .
+    build:
+      # Contesto = radice del monorepo: il Dockerfile ha bisogno del lockfile
+      # pnpm e del workspace, non solo di apps/cms (vedi commenti nel Dockerfile).
+      context: ../..
+      dockerfile: apps/cms/Dockerfile
     restart: unless-stopped
     depends_on:
       - postgres
@@ -29,7 +33,10 @@ services:
     ports:
       - '127.0.0.1:3001:3000'
     volumes:
-      - media:/app/media
+      # Il server standalone di Next fa chdir nella cartella di apps/cms
+      # all'avvio, quindi lo staticDir relativo 'media' (Media.ts) risolve
+      # in /app/apps/cms/media dentro il container, non /app/media.
+      - media:/app/apps/cms/media
 
 volumes:
   pgdata:

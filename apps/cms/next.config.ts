@@ -18,6 +18,11 @@ const turbopackRoot = existsSync(path.join(monorepoRoot, 'pnpm-workspace.yaml'))
   : dirname
 
 const nextConfig: NextConfig = {
+  // Richiesto dal Dockerfile di produzione (build standalone, vedi
+  // docker-compose.prod.yml): produce .next/standalone con un server.js
+  // autonomo invece di richiedere l'intero node_modules a runtime.
+  output: 'standalone',
+  outputFileTracingRoot: turbopackRoot,
   images: {
     localPatterns: [
       {
