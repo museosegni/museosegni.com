@@ -23,6 +23,9 @@ export const Media: CollectionConfig = {
     },
   ],
   upload: {
+    // Usato solo in locale/dev quando il plugin storage-vercel-blob non è attivo
+    // (nessun BLOB_READ_WRITE_TOKEN): in produzione su Vercel i file vanno su
+    // Vercel Blob, vedi payload.config.ts — il filesystem locale non persiste.
     staticDir: 'media',
     // Immagini + PDF (regolamento, carta dei servizi...). Sharp applica resize/formatOptions
     // solo ai mimetype immagine: i PDF caricati non vengono toccati.

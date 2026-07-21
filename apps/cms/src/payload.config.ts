@@ -2,8 +2,9 @@ import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { en } from '@payloadcms/translations/languages/en'
 import { it } from '@payloadcms/translations/languages/it'
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import path from 'path'
-import { buildConfig } from 'payload'
+import { buildConfig, type Plugin } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
@@ -25,6 +26,18 @@ import { SiteSettings } from './globals/SiteSettings'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
+
+// Su Vercel il filesystem è effimero: gli upload (Media collection) vanno su
+// Vercel Blob invece che su disco locale. In locale, senza il token, non si
+// attiva il plugin e si torna al filesystem (staticDir in collections/Media.ts).
+const storagePlugins: Plugin[] = process.env.BLOB_READ_WRITE_TOKEN
+  ? [
+      vercelBlobStorage({
+        collections: { media: true },
+        token: process.env.BLOB_READ_WRITE_TOKEN,
+      }),
+    ]
+  : []
 
 export default buildConfig({
   admin: {
@@ -65,9 +78,18 @@ export default buildConfig({
   },
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.DATABASE_URL || '',
+      // POSTGRES_URL è impostata automaticamente da Vercel quando si collega
+      // l'integrazione Postgres (Neon) dal marketplace; DATABASE_URL resta
+      // valida per un Postgres esterno o per lo sviluppo locale.
+      connectionString: process.env.DATABASE_URL || process.env.POSTGRES_URL || '',
     },
+    // Niente migration file gestite a mano in questo progetto: lo schema viene
+    // sincronizzato automaticamente ad ogni deploy. Scelta adatta a un CMS
+    // di contenuti a basso volume di scrittura con flusso semplice
+    // git push → deploy Vercel; da rivalutare se in futuro servisse un
+    // controllo più fine sulle migrazioni in produzione.
+    push: true,
   }),
   sharp,
-  plugins: [],
+  plugins: storagePlugins,
 })
