@@ -1,5 +1,3 @@
-version: '3'
-
 # Deploy di produzione sul VPS: Payload CMS + Postgres, media su disco locale
 # persistente (nessun Vercel Blob, vedi payload.config.ts). Il container `cms`
 # non espone porte pubblicamente: ci pensa nginx (reverse proxy sul VPS) a
