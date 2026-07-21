@@ -1,0 +1,33 @@
+version: '3'
+
+# Deploy di produzione sul VPS: Payload CMS + Postgres, media su disco locale
+# persistente (nessun Vercel Blob, vedi payload.config.ts). Il container `cms`
+# non espone porte pubblicamente: ci pensa Caddy (reverse proxy sul VPS) a
+# esporre cms.museosegni.com in HTTPS verso la porta 3000 interna.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    env_file: .env.prod
+    environment:
+      POSTGRES_USER: museosegni
+      POSTGRES_DB: museosegni_cms
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  cms:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    env_file: .env.prod
+    ports:
+      - '127.0.0.1:3000:3000'
+    volumes:
+      - media:/app/media
+
+volumes:
+  pgdata:
+  media:

@@ -43,6 +43,12 @@ COPY --from=builder /app/public ./public
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
 
+# Cartella media (upload Payload, vedi collections/Media.ts): montata come
+# volume Docker in produzione (docker-compose.prod.yml) per persistere i file
+# tra un deploy e l'altro. Deve essere scrivibile dall'utente nextjs.
+RUN mkdir media
+RUN chown nextjs:nodejs media
+
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 

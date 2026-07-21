@@ -40,3 +40,5 @@ next-env.d.ts
 
 /media
 .env*
+!.env.example
+!.env.prod.example
