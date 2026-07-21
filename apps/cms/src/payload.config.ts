@@ -23,6 +23,7 @@ import { MuseoLibreria } from './globals/MuseoLibreria'
 import { MuseoContatti } from './globals/MuseoContatti'
 import { Pau } from './globals/Pau'
 import { SiteSettings } from './globals/SiteSettings'
+import { migrations } from './migrations'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -83,12 +84,12 @@ export default buildConfig({
       // valida per un Postgres esterno o per lo sviluppo locale.
       connectionString: process.env.DATABASE_URL || process.env.POSTGRES_URL || '',
     },
-    // Niente migration file gestite a mano in questo progetto: lo schema viene
-    // sincronizzato automaticamente ad ogni deploy. Scelta adatta a un CMS
-    // di contenuti a basso volume di scrittura con flusso semplice
-    // git push → deploy Vercel; da rivalutare se in futuro servisse un
-    // controllo più fine sulle migrazioni in produzione.
-    push: true,
+    // In locale/dev lo schema si sincronizza automaticamente (push, comportamento
+    // di default di Payload quando NODE_ENV !== 'production'). Su Vercel
+    // (NODE_ENV=production) il push è disabilitato per design: le migrazioni in
+    // src/migrations/ vengono invece applicate automaticamente ad ogni cold start
+    // tramite prodMigrations — nessun comando manuale da lanciare dopo il deploy.
+    prodMigrations: migrations,
   }),
   sharp,
   plugins: storagePlugins,
