@@ -33,11 +33,16 @@ services:
     ports:
       - '127.0.0.1:3001:3000'
     volumes:
+      # Bind mount su una cartella normale del VPS (non un volume Docker con
+      # nome), così i media sono facili da sfogliare e da mettere nei backup
+      # con ls/rsync/tar. La cartella host va creata e resa scrivibile dall'utente
+      # nextjs del container (uid 1001):
+      #   sudo mkdir -p /var/lib/museosegni/media
+      #   sudo chown 1001:1001 /var/lib/museosegni/media
       # Il server standalone di Next fa chdir nella cartella di apps/cms
       # all'avvio, quindi lo staticDir relativo 'media' (Media.ts) risolve
-      # in /app/apps/cms/media dentro il container, non /app/media.
-      - media:/app/apps/cms/media
+      # in /app/apps/cms/media dentro il container.
+      - /var/lib/museosegni/media:/app/apps/cms/media
 
 volumes:
   pgdata:
-  media:
