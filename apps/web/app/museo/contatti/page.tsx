@@ -1,15 +1,34 @@
-import { Clock, Phone, Mail, MapPin, Train, Car, Ticket } from 'lucide-react';
+import { Clock, Phone, Mail, MapPin, Train, Car, Ticket, AlertCircle } from 'lucide-react';
 import { getMuseoContatti, getSiteSettings } from '@/lib/payload';
 
 export default async function MuseoContattiPage() {
   const [contatti, siteSettings] = await Promise.all([getMuseoContatti(), getSiteSettings()]);
+  const activeNotices = (siteSettings?.notices ?? []).filter((n) => n.active !== false);
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
       <h1 className="font-heading text-3xl sm:text-4xl text-white mb-2">
         Contatti e <span className="text-museum-accent">Orari</span>
       </h1>
-      <p className="text-white/60 font-body text-sm mb-10">{contatti?.subtitle}</p>
+      <p className="text-white/60 font-body text-sm mb-6">{contatti?.subtitle}</p>
+
+      {activeNotices.length > 0 && (
+        <div className="space-y-3 mb-10">
+          {activeNotices.map((notice, idx) => (
+            <div
+              key={idx}
+              className="flex items-start gap-3 border border-museum-accent/40 rounded-lg p-4 bg-museum-accent/10"
+            >
+              <AlertCircle className="w-5 h-5 text-museum-accent mt-0.5 shrink-0" />
+              <p className="text-white font-body text-sm">
+                <span className="font-semibold">{notice.title}</span>
+                {notice.date ? <span className="text-white/60"> ({notice.date})</span> : null}
+                {notice.description ? `: ${notice.description}` : null}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Contact Info */}
@@ -35,7 +54,18 @@ export default async function MuseoContattiPage() {
               <Mail className="w-5 h-5 text-museum-accent" />
               Email
             </h3>
-            <p className="text-white/80 text-sm font-body">{siteSettings?.email}</p>
+            {(siteSettings?.emails ?? []).length > 0 ? (
+              <div className="space-y-2">
+                {siteSettings!.emails!.map((item, idx) => (
+                  <div key={idx} className="text-sm font-body">
+                    {item.label && <span className="text-white/50">{item.label}: </span>}
+                    <span className="text-white/80">{item.email}</span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-white/80 text-sm font-body">{siteSettings?.email}</p>
+            )}
           </div>
         </div>
 

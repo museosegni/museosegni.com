@@ -38,6 +38,30 @@ export const sitiArcheologici = [
       'L’area dell’antica acropoli, situata sulla sommità del monte, riuniva in un unico organismo architettonico almeno tre elementi di grande rilievo per la città antica: il tempio, dedicato a Giunone Moneta, con la sua piazza antistante; il grande bacino circolare posto alle sue spalle, quale esempio più noto di <em>opus signinum</em> e, oltre questo, la piccola terrazza terminale, destinata ad ospitare un qualche edificio ormai perduto. La grande struttura, quale oggi percepibile, è il risultato finale di una lunga serie di interventi, dei quali non è spesso possibile distinguere le varie fasi, ma di cui è possibile individuare nel tardo II secolo a.C. una generale riorganizzazione architettonica, conferendo all’acropoli di Segni i caratteri propri delle maggiori architetture del tardo ellenismo, quali noi oggi possiamo pienamente apprezzare.\n\nMentre nella città romana l’acropoli era destinata ad ospitare il culto della divinità protettrice della città, nel medioevo acquisisce un ruolo prettamente strategico, in virtù del fatto che era il luogo più incline a essere fortificato e sicuramente quello maggiormente difendibile.\n\nSe è possibile che la sistemazione di <em>questo castrum</em> possa risalire già ai primi secoli dell’alto medioevo, in maniera analoga a molte altre città in questo periodo, in un arco di tempo compreso tra il XII e il XIII secolo numerosi interventi sembrano modificare ulteriormente l’aspetto di questa zona, che dovette accentuare il carattere di borgo fortificato. In questo momento, infatti, oltre agli interventi architettonici riscontrabili nella chiesa di San Pietro, i documenti ci attestano la costruzione di un palazzo da parte del pontefice Eugenio III, probabilmente nel posto oggi occupato dal maestoso complesso dell’ex Seminario Vescovile.',
     gallery: [],
   },
+  {
+    slug: 'area-del-foro',
+    title: 'Area del Foro',
+    subtitle: 'Il fulcro della vita cittadina antica e medievale',
+    description:
+      'L’antico Foro di Segni occupava l’area dell’attuale Piazza S. Maria, la quale ha perpetuato nel corso dei secoli il ruolo di fulcro della vita cittadina svolto dall’antico spazio forense. Nella pianificazione urbanistica della città antica, la piazza del Foro venne collocata nel punto di incrocio dei due maggiori assi viari: il primo, con andamento nord-sud, collegava la porta principale della città con l’acropoli; il secondo, est-ovest, raccordava la piazza con un altro ingresso di notevole importanza, la porta cd. dell’Elcino. Sono ancora oggi in più punti visibili i resti di alcuni dei grandi terrazzamenti su cui venne impostata la piazza, che testimoniano, con la loro disposizione planimetrica e la loro complessità strutturale, l’accurata progettazione che sottostava a tali opere. Nel tardo I sec. a.C., in una zona adiacente al foro e gravitante sul principale asse est-ovest della viabilità urbana, venne costruito un grande criptoportico, oggi parzialmente visitabile lungo via Lauri.\n\nIn età medievale la piazza continuò a costituire il fulcro della vita cittadina, modificando però il suo assetto interno e ospitando i complessi architettonici che erano l’espressione della società dell’epoca. Se pochi materiali di arredo liturgico, appartenenti alla fine dell’VIII – inizi del IX secolo e provenienti dalla cattedrale, sembrano indicare interventi databili già nell’alto medioevo, la maggior parte delle strutture finora indagate è da riferisi al XII – XIII secolo. Questi edifici sono la testimonianza diretta della trasformazione del nuovo assetto raggiunto dalla piazza, ricco di significati politici ed economici nella netta distinzione fra spazi civili e spazi religiosi, in una fase di grande vitalità sociale ed economica della città.\n\nDi fondamentale importanza per comprendere l’assetto dell’area in epoca antica e medievale, sono stati i risultati della campagna di scavo 2012-2014, denominata <em>Segni Project</em>, svolta con la preziosa collaborazione della British School at Rome.',
+    gallery: [],
+  },
+  {
+    slug: 'santa-lucia',
+    title: 'Complesso Ellenistico di Santa Lucia',
+    subtitle: 'Un grande sostruzione ellenistica riutilizzata come chiesa',
+    description:
+      'Il complesso di Santa Lucia sorge nell’area alta della città, lungo il fianco orientale delle fortificazioni dalle quali era separato da un grande muraglione di contenimento in opera incerta di calcare. Si tratta dei resti di un grande complesso sostruttivo, databile intorno alla metà del II secolo a.C., impostato su una serie di ambienti voltati affacciati verso la valle e destinati a sorreggere un’ampia terrazza destinata a ospitare un qualche importante monumento, verosimilmente pubblico, a noi oggi completamente ignoto. In epoca medievale, su questa serie di arcate, così come documentato da fotografie dei primi anni del ‘900, si impostò la chiesa dedicata a Santa Lucia, ricordata e descritta nel manoscritto di Gregorio Lauri (1701-1708). L’edificio ecclesiastico aveva una cappella dedicata a Tomas Becket, che nel febbraio del 1173 fu qui canonizzato da Papa Alessandro III.',
+    gallery: [],
+  },
+  {
+    slug: 'tempio-ercole',
+    title: 'Area del Tempio d\'Ercole',
+    subtitle: 'Il santuario del dio protettore della pastorizia',
+    description:
+      'Il complesso architettonico occupava un’ampia terrazza artificiale, in parte sostruita da poderose cisterne in cementizio, ancora oggi perfettamente conservate, posta subito al di fuori di Porta Maggiore a una quota sensibilmente inferiore rispetto a questa. Si colloca in un punto nodale della viabilità suburbana, lì dove confluivano verso l’entrata principale della città i maggiori assi provenienti dal territorio e costituiva una sorta di secondo foro in cui probabilmente si svolgeva il commercio del bestiame e la macellazione delle carni. Il ritrovamento di tre basi con dedica a Ercole e un cospicuo nucleo di terrecotte architettoniche, conservate al Museo Archeologico, fanno supporre proprio in quest’area un tempio dedicato al dio protettore della pastorizia. In epoca medievale quest’area fu occupata da diverse sepolture, così come descritto nelle notizie degli scavi effettuati da Ettore Ghislanzoni agli inizi del ‘900.',
+    gallery: [],
+  },
 ]
 
 export const chiese = [
@@ -64,7 +88,7 @@ export const chiese = [
   },
   {
     slug: 'gesu',
-    title: 'Chiesa del Gesù',
+    title: 'Chiesa del Gesù e Palazzo Comunale',
     subtitle: 'Santuario della Madonna Addolorata',
     description:
       'Costruita il 9 settembre 1713, quando era vescovo Filippo Michele Ellis, la piccola chiesa è a navata unica con sei cappelle laterali e un presbiterio separato dall’aula da una balaustra in legno.',
@@ -111,10 +135,10 @@ export const edifici = [
     title: 'Palazzo Conti',
     subtitle: 'Residenza nobiliare all’ingresso della città',
     description:
-      'Vasto complesso architettonico che include la monumentale Porta Maggiore. Sebbene di origine medievale, l’aspetto attuale risale in gran parte ai restauri successivi al saccheggio del 1557 operato dalle truppe di Marcantonio Colonna.',
+      'Il Palazzo della famiglia Conti si trova all’ingresso del centro storico di Segni, il vasto complesso architettonico, costruito probabilmente in epoca medievale, include anche Porta Maggiore: la porta ingresso monumentale all’antica <em>Signia</em>.',
     history:
-      'Restaurato da Alessandro Conti Sforza nel XVI secolo. Nel 1887 il Vescovo Biagio Sibilia lo acquistò per conto di Leone XIII, affidandolo alle suore di Santa Giovanna Antida per l’educazione della gioventù femminile.',
-    architecture: 'Integrazione con Porta Maggiore, torre quadrata medievale, facciata rinascimentale, resti di muratura in via dell’Asilo.',
+      'Della struttura medievale è rimasto ben poco, fatta eccezione per un tratto di muratura ancora visibile in via dell’Asilo e per i resti di una torre quadrata a destra di Porta Maggiore. L’edificio fu danneggiato nel 1557, dalle truppe di Marcantonio Colonna, che invasero e saccheggiarono Segni. Il restauro del palazzo fu fatto eseguire da Alessandro Conti Sforza, nipote di Fulvia Conti e di Mario Sforza (da cui nacque il ramo dei Conti Sforza), eletto da papa Sisto V Duca di Segni.\n\nLo acquistò il Vescovo di Segni, Biagio Sibilia, per conto di Leone XIII, che nel 1887 lo affidò alle suore di Santa Giovanna Antida perché vi educassero la gioventù femminile.',
+    architecture: 'Integrazione con Porta Maggiore, resti di torre quadrata medievale a destra della porta, tratto di muratura in via dell’Asilo, aspetto attuale frutto del restauro cinquecentesco di Alessandro Conti Sforza.',
   },
 ]
 
@@ -496,6 +520,9 @@ export const home = {
   introTitle: 'Scopri il Museo',
   introText:
     'Aperto al pubblico per la prima volta nel 2001, ampliato successivamente nel 2006, propone un allestimento interamente dedicato al ricchissimo patrimonio della città antica e medievale e del suo territorio: i molteplici itinerari che si snodano al suo interno divengono poi, all’esterno della struttura, singoli percorsi di visita a quella che può oggi vantarsi di essere una vera e propria “città – museo”.',
+  quoteText:
+    '"Il Museo è un\'istituzione permanente, senza scopo di lucro, al servizio della società e del suo sviluppo. È aperto al pubblico e compie ricerche che riguardano le testimonianze materiali e immateriali dell\'umanità e del suo ambiente; le acquisisce, le conserva, le comunica e, soprattutto, le espone a fini di studio, educazione e diletto."',
+  quoteSource: 'International Council of Museums, art. 3.1 dello Statuto Vienna 2007',
   featuredCards: [
     { title: 'Mura Poligonali', description: 'Le imponenti fortificazioni della città antica' },
     { title: 'Necropoli', description: 'Oggetti per l’ultimo viaggio' },
@@ -570,40 +597,24 @@ export const museoSede = {
 export const museoServizi = {
   services: [
     {
-      icon: 'BookOpen',
-      title: 'Biblioteca specializzata',
-      description:
-        'La biblioteca del Museo conserva oltre 3.000 volumi dedicati all’archeologia, alla storia antica e all’arte del territorio signino. Sono disponibili monografie, riviste specializzate e tesi di laurea. L’accesso è gratuito su prenotazione per studiosi e ricercatori.',
-    },
-    {
-      icon: 'Archive',
-      title: 'Archivio fotografico',
-      description:
-        'L’archivio conserva migliaia di fotografie storiche e documentarie relative agli scavi, ai reperti e ai monumenti di Segni. Le immagini coprono un arco cronologico che va dalla fine dell’Ottocento ai giorni nostri, documentando l’evoluzione degli studi archeologici.',
-    },
-    {
       icon: 'GraduationCap',
-      title: 'Laboratorio didattico',
-      description:
-        'Spazio attrezzato per attività educative rivolte a scuole di ogni ordine e grado. I laboratori propongono attività pratiche di archeologia sperimentale, dalla lavorazione della ceramica alla scrittura su tavolette cerate.',
+      title: 'Attività didattiche e laboratori',
+      description: 'Su prenotazione: attività didattiche per le scuole e laboratori.',
     },
     {
       icon: 'Camera',
-      title: 'Visite guidate',
-      description:
-        'Il Museo organizza visite guidate per gruppi, scolaresche e singoli visitatori, sia all’interno del percorso espositivo che presso i siti archeologici della città. È possibile prenotare visite in diverse lingue.',
+      title: 'Visite tematiche e guidate',
+      description: 'Su prenotazione: visite tematiche e visite guidate al PAUD Segni Città – Museo.',
     },
     {
-      icon: 'Wifi',
-      title: 'WiFi gratuito',
-      description:
-        'Tutta l’area del Museo è coperta da connessione WiFi gratuita per i visitatori. Sono inoltre disponibili QR code in ogni sala per accedere a contenuti multimediali aggiuntivi.',
+      icon: 'BookOpen',
+      title: 'Biblioteca specialistica',
+      description: 'Il museo è dotato di una biblioteca specialistica consultabile su prenotazione.',
     },
     {
-      icon: 'Accessibility',
-      title: 'Accessibilità',
-      description:
-        'Il percorso museale è accessibile a persone con mobilità ridotta. Sono disponibili servizi per visitatori con disabilità visive e uditive, inclusi percorsi tattili e visite in LIS.',
+      icon: 'Archive',
+      title: 'Archivio',
+      description: 'Il museo è dotato di un archivio consultabile su prenotazione.',
     },
   ],
   researchText:
@@ -655,14 +666,28 @@ export const pau = {
 }
 
 export const siteSettings = {
-  address: 'Via Lauri 1, 00037 Segni (RM)',
+  address: 'Via Lauri, 1 - Segni (RM) 00037',
   phone: '+39 069 72 600 72',
   email: 'museo@comune.segni.rm.it',
+  emails: [
+    { label: 'Museo', email: 'museo@comune.segni.rm.it' },
+    { label: 'Direzione', email: 'fedcolaiacomo@comune.segni.rm.it' },
+    { label: 'Amici del Museo', email: 'amicidelmuseosegni@gmail.com' },
+  ],
+  notices: [
+    {
+      title: 'Ferragosto',
+      description: 'Aperto con orario ridotto: 10.00 - 13.00 / 16.30 - 18.30.',
+      date: '15 agosto',
+      active: true,
+    },
+  ],
   openingHours: [
-    { days: 'Martedì, Venerdì, Sabato e Domenica', hours: '09:00 - 13:00 / 15:00 - 19:00', closed: false },
+    { days: 'Martedì, Venerdì', hours: '9.00 - 13.00 / 15.00 - 19.00', closed: false },
+    { days: 'Sabato e domenica', hours: '9.00 - 13.00 / 15.00 - 19.00', closed: false },
     { days: 'Lunedì, Mercoledì, Giovedì', hours: '', closed: true },
   ],
-  holidayNote: 'Chiuso il 25 dicembre, 1 gennaio e 1 maggio. Orari speciali durante le festività.',
+  holidayNote: 'Ferragosto: 10.00 - 13.00 / 16.30 - 18.30.',
   ticketPrice: 'Gratuito',
   howToArrive: [
     { mode: 'car', description: 'Autostrada A1, uscita Colleferro. Seguire SP55 in direzione Segni per circa 15 km.' },

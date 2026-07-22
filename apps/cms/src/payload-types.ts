@@ -725,6 +725,11 @@ export interface Home {
   introTitle?: string | null;
   introText?: string | null;
   /**
+   * Citazione mostrata sotto il testo introduttivo (es. definizione ICOM di museo).
+   */
+  quoteText?: string | null;
+  quoteSource?: string | null;
+  /**
    * Le 3 card della home (link verso itinerario/collezione/museo). Il collegamento resta fisso nel template, qui si edita solo testo e immagine.
    */
   featuredCards?:
@@ -927,6 +932,43 @@ export interface SiteSetting {
   address?: string | null;
   phone?: string | null;
   email?: string | null;
+  /**
+   * Elenco completo dei contatti email (museo, direzione, associazione amici del museo, ecc.).
+   */
+  emails?:
+    | {
+        /**
+         * Es. "Museo", "Direzione", "Amici del Museo"
+         */
+        label: string;
+        email: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Avvisi su chiusure/orari straordinari (es. "Oggi museo chiuso", "Ferragosto: chiuso", "Natale: aperto solo la mattina"). Disattiva un avviso invece di cancellarlo per poterlo riattivare l’anno successivo.
+   */
+  notices?:
+    | {
+        /**
+         * Es. "Ferragosto", "Natale", "Chiusura straordinaria"
+         */
+        title: string;
+        /**
+         * Es. "Chiuso" oppure "Aperto solo la mattina, 9.00 - 13.00"
+         */
+        description?: string | null;
+        /**
+         * Facoltativo, es. "15 agosto" o "25 dicembre 2026"
+         */
+        date?: string | null;
+        /**
+         * Deseleziona per nascondere l’avviso senza eliminarlo.
+         */
+        active?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
   openingHours?:
     | {
         days?: string | null;
@@ -961,6 +1003,8 @@ export interface HomeSelect<T extends boolean = true> {
   heroCtaLabel?: T;
   introTitle?: T;
   introText?: T;
+  quoteText?: T;
+  quoteSource?: T;
   featuredCards?:
     | T
     | {
@@ -1140,6 +1184,22 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   address?: T;
   phone?: T;
   email?: T;
+  emails?:
+    | T
+    | {
+        label?: T;
+        email?: T;
+        id?: T;
+      };
+  notices?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        date?: T;
+        active?: T;
+        id?: T;
+      };
   openingHours?:
     | T
     | {

@@ -53,9 +53,17 @@ export default async function Home() {
         <h2 className="font-heading text-2xl sm:text-3xl text-white mb-4">
           Scopri il <span className="text-museum-accent">Museo</span>
         </h2>
-        <p className="text-white/70 font-body text-base leading-relaxed max-w-4xl mb-10">
+        <p className="text-white/70 font-body text-base leading-relaxed max-w-4xl mb-6 whitespace-pre-line">
           {home?.introText}
         </p>
+        {home?.quoteText && (
+          <blockquote className="border-l-2 border-museum-accent/60 pl-4 mb-10 max-w-4xl">
+            <p className="text-white/70 font-body text-base italic leading-relaxed">{home.quoteText}</p>
+            {home?.quoteSource && (
+              <cite className="block mt-2 text-white/50 font-body text-sm not-italic">{home.quoteSource}</cite>
+            )}
+          </blockquote>
+        )}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {(home?.featuredCards ?? []).map((card, idx) => {
             const link = featuredCardLinks[idx];

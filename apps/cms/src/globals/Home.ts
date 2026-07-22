@@ -15,6 +15,13 @@ export const Home: GlobalConfig = {
     { name: 'introTitle', type: 'text', localized: true, defaultValue: 'Scopri il Museo' },
     { name: 'introText', type: 'textarea', localized: true },
     {
+      name: 'quoteText',
+      type: 'textarea',
+      localized: true,
+      admin: { description: 'Citazione mostrata sotto il testo introduttivo (es. definizione ICOM di museo).' },
+    },
+    { name: 'quoteSource', type: 'text', localized: true },
+    {
       name: 'featuredCards',
       type: 'array',
       labels: { singular: 'Card in evidenza', plural: 'Card in evidenza' },

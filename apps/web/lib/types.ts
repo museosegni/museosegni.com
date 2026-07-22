@@ -72,6 +72,8 @@ export interface Home {
   heroCtaLabel?: string | null
   introTitle?: string | null
   introText?: string | null
+  quoteText?: string | null
+  quoteSource?: string | null
   featuredCards?: { title: string; description?: string | null; image?: MediaDoc | null }[]
   newsSectionTitle?: string | null
   newsItems?: { title: string; date?: string | null; excerpt?: string | null }[]
@@ -138,6 +140,13 @@ export interface SiteSettings {
   address?: string | null
   phone?: string | null
   email?: string | null
+  emails?: { label?: string | null; email: string }[]
+  notices?: {
+    title: string
+    description?: string | null
+    date?: string | null
+    active?: boolean
+  }[]
   openingHours?: { days?: string | null; hours?: string | null; closed?: boolean }[]
   holidayNote?: string | null
   ticketPrice?: string | null

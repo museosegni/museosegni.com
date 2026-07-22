@@ -112,26 +112,32 @@ export default function Header() {
 
                   {/* Dropdown */}
                   {item.children && openDropdown === item.label && (
+                    // Il wrapper esterno tocca il trigger (top-full, niente margine) e usa
+                    // pt-1 per lo spazio visivo: così l'area sensibile all'hover resta
+                    // continua fino al pannello, senza il varco morto che chiudeva il menu
+                    // al passaggio del mouse.
                     <div
-                      className={`absolute top-full mt-1 w-56 bg-museum-dark border border-museum-accent/40 rounded-md shadow-xl overflow-hidden z-50 ${
+                      className={`absolute top-full pt-1 w-56 z-50 ${
                         item.label === 'Collezioni' ? 'right-0' : 'left-0'
                       }`}
                     >
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.path}
-                          href={child.path}
-                          className={`block px-4 py-2.5 text-sm font-body transition-colors ${
-                            pathname === child.path ||
-                            pathname.startsWith(child.path + '/')
-                              ? 'text-museum-accent bg-museum-accent/10'
-                              : 'text-white/80 hover:text-museum-accent hover:bg-museum-accent/5'
-                          }`}
-                          onClick={() => setOpenDropdown(null)}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                      <div className="bg-museum-dark border border-museum-accent/40 rounded-md shadow-xl overflow-hidden">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.path}
+                            href={child.path}
+                            className={`block px-4 py-2.5 text-sm font-body transition-colors ${
+                              pathname === child.path ||
+                              pathname.startsWith(child.path + '/')
+                                ? 'text-museum-accent bg-museum-accent/10'
+                                : 'text-white/80 hover:text-museum-accent hover:bg-museum-accent/5'
+                            }`}
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>

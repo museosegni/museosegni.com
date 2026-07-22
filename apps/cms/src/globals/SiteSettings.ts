@@ -13,6 +13,33 @@ export const SiteSettings: GlobalConfig = {
     { name: 'phone', type: 'text', defaultValue: '+39 069 72 600 72' },
     { name: 'email', type: 'text', defaultValue: 'museo@comune.segni.rm.it' },
     {
+      name: 'emails',
+      type: 'array',
+      labels: { singular: 'Email', plural: 'Email' },
+      admin: {
+        description: 'Elenco completo dei contatti email (museo, direzione, associazione amici del museo, ecc.).',
+      },
+      fields: [
+        { name: 'label', type: 'text', required: true, localized: true, admin: { description: 'Es. "Museo", "Direzione", "Amici del Museo"' } },
+        { name: 'email', type: 'text', required: true },
+      ],
+    },
+    {
+      name: 'notices',
+      type: 'array',
+      labels: { singular: 'Avviso', plural: 'Avvisi' },
+      admin: {
+        description:
+          'Avvisi su chiusure/orari straordinari (es. "Oggi museo chiuso", "Ferragosto: chiuso", "Natale: aperto solo la mattina"). Disattiva un avviso invece di cancellarlo per poterlo riattivare l’anno successivo.',
+      },
+      fields: [
+        { name: 'title', type: 'text', required: true, localized: true, admin: { description: 'Es. "Ferragosto", "Natale", "Chiusura straordinaria"' } },
+        { name: 'description', type: 'textarea', localized: true, admin: { description: 'Es. "Chiuso" oppure "Aperto solo la mattina, 9.00 - 13.00"' } },
+        { name: 'date', type: 'text', admin: { description: 'Facoltativo, es. "15 agosto" o "25 dicembre 2026"' } },
+        { name: 'active', type: 'checkbox', defaultValue: true, admin: { description: 'Deseleziona per nascondere l’avviso senza eliminarlo.' } },
+      ],
+    },
+    {
       name: 'openingHours',
       type: 'array',
       labels: { singular: 'Fascia oraria', plural: 'Orari' },
