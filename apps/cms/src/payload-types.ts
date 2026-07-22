@@ -271,9 +271,15 @@ export interface SitiArcheologici {
    * Testo del sito. Può contenere tag HTML inline (es. <em>...</em>) già presenti nel testo originale.
    */
   description?: string | null;
+  /**
+   * Formato 16:9 — dimensione consigliata 1920 x 1080px.
+   */
   heroImage?: (number | null) | Media;
   gallery?:
     | {
+        /**
+         * Formato 4:3 — dimensione consigliata 1200 x 900px.
+         */
         image?: (number | null) | Media;
         caption?: string | null;
         id?: string | null;
@@ -298,9 +304,15 @@ export interface Chiese {
   description?: string | null;
   history?: string | null;
   features?: string | null;
+  /**
+   * Formato 16:9 — dimensione consigliata 1920 x 1080px.
+   */
   heroImage?: (number | null) | Media;
   gallery?:
     | {
+        /**
+         * Formato 4:3 — dimensione consigliata 1200 x 900px. La terza immagine della galleria viene invece mostrata in formato quadrato (1080 x 1080px).
+         */
         image?: (number | null) | Media;
         caption?: string | null;
         id?: string | null;
@@ -322,9 +334,15 @@ export interface Edifici {
   description?: string | null;
   history?: string | null;
   architecture?: string | null;
+  /**
+   * Formato 16:9 — dimensione consigliata 1920 x 1080px.
+   */
   heroImage?: (number | null) | Media;
   gallery?:
     | {
+        /**
+         * Formato 4:3 — dimensione consigliata 1200 x 900px. La terza immagine della galleria viene invece mostrata in formato quadrato (1080 x 1080px).
+         */
         image?: (number | null) | Media;
         caption?: string | null;
         id?: string | null;
@@ -344,11 +362,17 @@ export interface Collezioni {
   title: string;
   subtitle?: string | null;
   description?: string | null;
+  /**
+   * Immagine di copertina della collezione: mostrata come miniatura quadrata (1080 x 1080px) nell’elenco Collezioni e come copertina 16:9 (1920 x 1080px) nella pagina della collezione. Carica un’immagine di alta qualità con il soggetto centrato: viene ritagliata automaticamente in entrambi i formati.
+   */
   heroImage?: (number | null) | Media;
   items?:
     | {
         name: string;
         description?: string | null;
+        /**
+         * Formato quadrato — dimensione consigliata 1080 x 1080px.
+         */
         image?: (number | null) | Media;
         object?: string | null;
         provenance?: string | null;
@@ -720,6 +744,9 @@ export interface Home {
   heroTitle?: string | null;
   heroTitleAccent?: string | null;
   heroSubtitle?: string | null;
+  /**
+   * Formato 16:9 — dimensione consigliata 1920 x 1080px.
+   */
   heroImage?: (number | null) | Media;
   heroCtaLabel?: string | null;
   introTitle?: string | null;
@@ -736,6 +763,9 @@ export interface Home {
     | {
         title: string;
         description?: string | null;
+        /**
+         * Formato 4:3 — dimensione consigliata 1200 x 900px.
+         */
         image?: (number | null) | Media;
         id?: string | null;
       }[]
@@ -760,6 +790,9 @@ export interface Museo {
   id: number;
   heroTitle?: string | null;
   heroSubtitle?: string | null;
+  /**
+   * Formato 16:9 — dimensione consigliata 1920 x 1080px.
+   */
   heroImage?: (number | null) | Media;
   /**
    * Paragrafi separati da riga vuota, come nel sito attuale.
@@ -774,6 +807,9 @@ export interface Museo {
  */
 export interface MuseoStoria {
   id: number;
+  /**
+   * Formato 16:9 — dimensione consigliata 1920 x 1080px.
+   */
   heroImage?: (number | null) | Media;
   /**
    * Es. "La Ricerca e la Nascita", "Divulgazione e Futuro".
@@ -790,6 +826,9 @@ export interface MuseoStoria {
     | null;
   sideImages?:
     | {
+        /**
+         * Formato 4:3 — dimensione consigliata 1200 x 900px.
+         */
         image?: (number | null) | Media;
         caption?: string | null;
         id?: string | null;
@@ -817,6 +856,9 @@ export interface MuseoSede {
    * Paragrafi separati da riga vuota.
    */
   body?: string | null;
+  /**
+   * Formato 4:3 — dimensione consigliata 1200 x 900px.
+   */
   exteriorImage?: (number | null) | Media;
   /**
    * Es. "XIII Secolo", "Centro Storico", "Architettura".
@@ -828,6 +870,9 @@ export interface MuseoSede {
         id?: string | null;
       }[]
     | null;
+  /**
+   * Formato panoramico 21:9 — dimensione consigliata 2100 x 900px.
+   */
   interiorImage?: (number | null) | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -838,6 +883,9 @@ export interface MuseoSede {
  */
 export interface MuseoServizi {
   id: number;
+  /**
+   * Formato 16:9 — dimensione consigliata 1920 x 1080px.
+   */
   heroImage?: (number | null) | Media;
   services?:
     | {
@@ -861,6 +909,9 @@ export interface MuseoServizi {
  */
 export interface MuseoLibreria {
   id: number;
+  /**
+   * Formato 16:9 — dimensione consigliata 1920 x 1080px.
+   */
   heroImage?: (number | null) | Media;
   books?:
     | {
@@ -900,6 +951,9 @@ export interface Pau {
   heroTitle?: string | null;
   heroTitleAccent?: string | null;
   heroSubtitle?: string | null;
+  /**
+   * Formato 16:9 — dimensione consigliata 1920 x 1080px.
+   */
   heroImage?: (number | null) | Media;
   introHeading?: string | null;
   /**
@@ -915,6 +969,9 @@ export interface Pau {
     | null;
   sideImages?:
     | {
+        /**
+         * Formato 4:3 — dimensione consigliata 1200 x 900px.
+         */
         image?: (number | null) | Media;
         caption?: string | null;
         id?: string | null;

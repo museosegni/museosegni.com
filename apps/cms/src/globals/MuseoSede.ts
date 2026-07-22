@@ -1,6 +1,7 @@
 import type { GlobalConfig } from 'payload'
 
 import { publicReadAuthWrite } from '../access/isLoggedIn'
+import { CARD_4_3, BANNER_21_9 } from '../lib/imageDims'
 
 export const MuseoSede: GlobalConfig = {
   slug: 'museo-sede',
@@ -20,7 +21,7 @@ export const MuseoSede: GlobalConfig = {
       localized: true,
       admin: { description: 'Paragrafi separati da riga vuota.' },
     },
-    { name: 'exteriorImage', type: 'upload', relationTo: 'media' },
+    { name: 'exteriorImage', type: 'upload', relationTo: 'media', admin: { description: CARD_4_3 } },
     {
       name: 'factCards',
       type: 'array',
@@ -31,6 +32,6 @@ export const MuseoSede: GlobalConfig = {
         { name: 'description', type: 'text', localized: true },
       ],
     },
-    { name: 'interiorImage', type: 'upload', relationTo: 'media' },
+    { name: 'interiorImage', type: 'upload', relationTo: 'media', admin: { description: BANNER_21_9 } },
   ],
 }

@@ -1,6 +1,7 @@
 import type { GlobalConfig } from 'payload'
 
 import { publicReadAuthWrite } from '../access/isLoggedIn'
+import { HERO_16_9, CARD_4_3 } from '../lib/imageDims'
 
 export const Pau: GlobalConfig = {
   slug: 'pau',
@@ -10,7 +11,7 @@ export const Pau: GlobalConfig = {
     { name: 'heroTitle', type: 'text', localized: true, defaultValue: 'PAU' },
     { name: 'heroTitleAccent', type: 'text', localized: true, defaultValue: 'Segni Città-Museo' },
     { name: 'heroSubtitle', type: 'textarea', localized: true },
-    { name: 'heroImage', type: 'upload', relationTo: 'media' },
+    { name: 'heroImage', type: 'upload', relationTo: 'media', admin: { description: HERO_16_9 } },
     { name: 'introHeading', type: 'text', localized: true, defaultValue: 'Il concetto di museo diffuso' },
     {
       name: 'introText',
@@ -32,7 +33,7 @@ export const Pau: GlobalConfig = {
       type: 'array',
       labels: { singular: 'Immagine', plural: 'Immagini laterali' },
       fields: [
-        { name: 'image', type: 'upload', relationTo: 'media' },
+        { name: 'image', type: 'upload', relationTo: 'media', admin: { description: CARD_4_3 } },
         { name: 'caption', type: 'text', localized: true },
       ],
     },

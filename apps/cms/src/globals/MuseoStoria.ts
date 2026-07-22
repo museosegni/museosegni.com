@@ -1,13 +1,14 @@
 import type { GlobalConfig } from 'payload'
 
 import { publicReadAuthWrite } from '../access/isLoggedIn'
+import { HERO_16_9, CARD_4_3 } from '../lib/imageDims'
 
 export const MuseoStoria: GlobalConfig = {
   slug: 'museo-storia',
   label: 'Museo · Storia',
   access: publicReadAuthWrite,
   fields: [
-    { name: 'heroImage', type: 'upload', relationTo: 'media' },
+    { name: 'heroImage', type: 'upload', relationTo: 'media', admin: { description: HERO_16_9 } },
     {
       name: 'sections',
       type: 'array',
@@ -28,7 +29,7 @@ export const MuseoStoria: GlobalConfig = {
       type: 'array',
       labels: { singular: 'Immagine', plural: 'Immagini laterali' },
       fields: [
-        { name: 'image', type: 'upload', relationTo: 'media' },
+        { name: 'image', type: 'upload', relationTo: 'media', admin: { description: CARD_4_3 } },
         { name: 'caption', type: 'text', localized: true },
       ],
     },

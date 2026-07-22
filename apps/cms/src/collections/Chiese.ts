@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
 import { publicReadAuthWrite } from '../access/isLoggedIn'
+import { HERO_16_9, GALLERY_MIXED } from '../lib/imageDims'
 
 // Corrisponde all'interfaccia `Chiesa` di apps/web/src/data/museo.ts.
 export const Chiese: CollectionConfig = {
@@ -23,13 +24,13 @@ export const Chiese: CollectionConfig = {
     },
     { name: 'history', type: 'textarea', localized: true },
     { name: 'features', type: 'textarea', localized: true },
-    { name: 'heroImage', type: 'upload', relationTo: 'media' },
+    { name: 'heroImage', type: 'upload', relationTo: 'media', admin: { description: HERO_16_9 } },
     {
       name: 'gallery',
       type: 'array',
       labels: { singular: 'Immagine', plural: 'Galleria' },
       fields: [
-        { name: 'image', type: 'upload', relationTo: 'media' },
+        { name: 'image', type: 'upload', relationTo: 'media', admin: { description: GALLERY_MIXED } },
         { name: 'caption', type: 'text', localized: true },
       ],
     },

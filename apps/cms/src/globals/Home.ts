@@ -1,6 +1,7 @@
 import type { GlobalConfig } from 'payload'
 
 import { publicReadAuthWrite } from '../access/isLoggedIn'
+import { HERO_16_9, CARD_4_3 } from '../lib/imageDims'
 
 export const Home: GlobalConfig = {
   slug: 'home',
@@ -10,7 +11,7 @@ export const Home: GlobalConfig = {
     { name: 'heroTitle', type: 'text', localized: true, defaultValue: 'Museo Archeologico' },
     { name: 'heroTitleAccent', type: 'text', localized: true, defaultValue: 'Comunale di Segni' },
     { name: 'heroSubtitle', type: 'textarea', localized: true },
-    { name: 'heroImage', type: 'upload', relationTo: 'media' },
+    { name: 'heroImage', type: 'upload', relationTo: 'media', admin: { description: HERO_16_9 } },
     { name: 'heroCtaLabel', type: 'text', localized: true, defaultValue: 'Esplora gli itinerari' },
     { name: 'introTitle', type: 'text', localized: true, defaultValue: 'Scopri il Museo' },
     { name: 'introText', type: 'textarea', localized: true },
@@ -32,7 +33,7 @@ export const Home: GlobalConfig = {
       fields: [
         { name: 'title', type: 'text', required: true, localized: true },
         { name: 'description', type: 'text', localized: true },
-        { name: 'image', type: 'upload', relationTo: 'media' },
+        { name: 'image', type: 'upload', relationTo: 'media', admin: { description: CARD_4_3 } },
       ],
     },
     { name: 'newsSectionTitle', type: 'text', localized: true, defaultValue: 'News e Eventi' },

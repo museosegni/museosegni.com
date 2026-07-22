@@ -1,6 +1,7 @@
 import type { GlobalConfig } from 'payload'
 
 import { publicReadAuthWrite } from '../access/isLoggedIn'
+import { HERO_16_9 } from '../lib/imageDims'
 
 export const Museo: GlobalConfig = {
   slug: 'museo',
@@ -9,7 +10,7 @@ export const Museo: GlobalConfig = {
   fields: [
     { name: 'heroTitle', type: 'text', localized: true, defaultValue: 'Il Museo Archeologico' },
     { name: 'heroSubtitle', type: 'textarea', localized: true },
-    { name: 'heroImage', type: 'upload', relationTo: 'media' },
+    { name: 'heroImage', type: 'upload', relationTo: 'media', admin: { description: HERO_16_9 } },
     {
       name: 'intro',
       type: 'textarea',
