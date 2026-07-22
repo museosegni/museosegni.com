@@ -69,7 +69,7 @@ export default async function ItinerarioPage({ params }: { params: Promise<{ slu
 
           {/* Sidebar */}
           <div className="space-y-4">
-            <div className="border border-museum-accent/30 rounded-lg p-5 bg-museum-darker">
+            <div className="museum-card p-5">
               <h3 className="font-heading text-lg text-white mb-3">Altri siti del parco</h3>
               <div className="space-y-2">
                 {sitiArcheologici

@@ -33,7 +33,7 @@ export default function ArtifactDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
         showCloseButton={false}
-        className="max-w-5xl w-full bg-museum-dark border border-museum-accent/30 p-0 overflow-hidden"
+        className="max-w-5xl w-full museum-panel border-0 p-0 overflow-hidden"
       >
         <DialogTitle className="sr-only">{artifact.name}</DialogTitle>
 
@@ -55,7 +55,7 @@ export default function ArtifactDialog({
                 preset="square-1-1"
                 alt={artifact.name}
                 label={artifact.name}
-                className="rounded-lg border border-museum-accent/20"
+                className="museum-frame"
               />
             </div>
           </div>

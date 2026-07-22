@@ -21,14 +21,14 @@ export default function CollezioneReperti({ items }: { items: Artifact[] }) {
           <button
             key={idx}
             onClick={() => openArtifact(item)}
-            className="text-left border border-museum-accent/30 rounded-lg overflow-hidden bg-museum-darker hover:border-museum-accent transition-colors cursor-pointer"
+            className="text-left museum-card museum-interactive overflow-hidden cursor-pointer"
           >
             <SiteImage
               media={item.image}
               preset="square-1-1"
               alt={item.name}
               label={item.name}
-              className="border-0 rounded-none"
+              className="rounded-none"
             />
             <div className="p-4">
               <h3 className="font-heading text-base text-white mb-1">{item.name}</h3>

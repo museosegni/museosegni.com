@@ -75,7 +75,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed bottom-0 lg:sticky lg:top-0 z-50 w-full bg-museum-dark/95 backdrop-blur-md border-t lg:border-t-0 lg:border-b border-museum-accent/30">
+      <header className="fixed bottom-0 lg:sticky lg:top-0 z-50 w-full bg-museum-dark/95 backdrop-blur-md museum-header-edge">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -121,7 +121,7 @@ export default function Header() {
                         item.label === 'Collezioni' ? 'right-0' : 'left-0'
                       }`}
                     >
-                      <div className="bg-museum-dark border border-museum-accent/40 rounded-md shadow-xl overflow-hidden">
+                      <div className="museum-chip shadow-xl overflow-hidden">
                         {item.children.map((child) => (
                           <Link
                             key={child.path}
@@ -202,7 +202,7 @@ export default function Header() {
             onClick={() => setMobileOpen(false)}
             aria-hidden="true"
           />
-          <div className="lg:hidden fixed bottom-20 left-4 right-4 z-[60] bg-museum-dark border border-museum-accent/30 rounded-2xl shadow-2xl max-h-[70vh] overflow-y-auto">
+          <div className="lg:hidden fixed bottom-20 left-4 right-4 z-[60] museum-panel shadow-2xl max-h-[70vh] overflow-y-auto">
             <nav className="px-4 py-3 space-y-1">
               {navItems.map((item) => (
                 <Link
@@ -238,7 +238,7 @@ export default function Header() {
             onClick={() => setSectionOpen(false)}
             aria-hidden="true"
           />
-          <div className="lg:hidden fixed bottom-20 left-4 right-4 z-[60] bg-museum-dark border border-museum-accent/30 rounded-2xl shadow-2xl max-h-[70vh] overflow-y-auto">
+          <div className="lg:hidden fixed bottom-20 left-4 right-4 z-[60] museum-panel shadow-2xl max-h-[70vh] overflow-y-auto">
             <nav className="px-4 py-3 space-y-0.5">
               {currentSection.children.map((child) => (
                 <Link

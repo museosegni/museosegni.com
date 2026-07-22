@@ -29,14 +29,14 @@ export default async function CollezioniPage() {
             <Link
               key={collezione.slug}
               href={`/collezioni/${collezione.slug}`}
-              className="group block border border-museum-accent/30 rounded-lg overflow-hidden hover:border-museum-accent transition-colors bg-museum-darker"
+              className="group block museum-card museum-interactive overflow-hidden"
             >
               <SiteImage
                 media={collezione.heroImage}
                 preset="square-1-1"
                 alt={collezione.title}
                 label={collezione.title}
-                className="border-0 rounded-none"
+                className="rounded-none"
               />
               <div className="p-4">
                 <h3 className="font-heading text-lg text-white group-hover:text-museum-accent transition-colors mb-1">
@@ -51,7 +51,7 @@ export default async function CollezioniPage() {
           ))}
         </div>
 
-        <div className="mt-12 border border-museum-accent/30 rounded-lg p-6 bg-museum-darker">
+        <div className="mt-12 museum-panel p-6">
           <div className="flex items-start gap-4">
             <Boxes className="w-6 h-6 text-museum-accent mt-1" />
             <div>

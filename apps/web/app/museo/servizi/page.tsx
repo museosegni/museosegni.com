@@ -37,7 +37,7 @@ export default async function MuseoServiziPage() {
           return (
             <div
               key={service.title}
-              className="border border-museum-accent/30 rounded-lg p-5 bg-museum-darker hover:border-museum-accent transition-colors"
+              className="museum-card museum-interactive p-5"
             >
               <Icon className="w-6 h-6 text-museum-accent mb-3" />
               <h3 className="font-heading text-lg text-white mb-2">{service.title}</h3>
@@ -47,7 +47,7 @@ export default async function MuseoServiziPage() {
         })}
       </div>
 
-      <div className="mt-12 border border-museum-accent/30 rounded-lg p-6 bg-museum-darker">
+      <div className="mt-12 museum-panel p-6">
         <h3 className="font-heading text-xl text-white mb-3">{servizi?.researchSectionTitle}</h3>
         <p className="text-white/80 font-body text-sm leading-relaxed mb-4">{servizi?.researchText}</p>
         <p className="text-white/60 text-sm font-body">

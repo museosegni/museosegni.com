@@ -29,7 +29,7 @@ export default async function MuseoLibreriaPage() {
             {(libreria?.books ?? []).map((book) => (
               <div
                 key={book.title}
-                className="flex items-center justify-between border border-museum-accent/20 rounded-md p-3 bg-museum-darker hover:border-museum-accent/40 transition-colors"
+                className="flex items-center justify-between museum-chip museum-interactive p-3"
               >
                 <div>
                   <p className="text-white text-sm font-body font-medium">{book.title}</p>
@@ -48,7 +48,7 @@ export default async function MuseoLibreriaPage() {
             {(libreria?.merchandise ?? []).map((item) => (
               <div
                 key={item.title}
-                className="flex items-center justify-between border border-museum-accent/20 rounded-md p-3 bg-museum-darker hover:border-museum-accent/40 transition-colors"
+                className="flex items-center justify-between museum-chip museum-interactive p-3"
               >
                 <div>
                   <p className="text-white text-sm font-body font-medium">{item.title}</p>
@@ -61,7 +61,7 @@ export default async function MuseoLibreriaPage() {
         </div>
       </div>
 
-      <div className="mt-10 border border-museum-accent/30 rounded-lg p-6 bg-museum-darker text-center">
+      <div className="mt-10 museum-panel p-6 text-center">
         <p className="text-white/80 text-sm font-body">
           Il bookshop è aperto negli orari del Museo. Per acquisti online contattare{' '}
           <span className="text-museum-accent">{siteSettings?.email}</span>

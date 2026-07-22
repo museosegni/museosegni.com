@@ -89,7 +89,7 @@ export default async function EdificioPage({ params }: { params: Promise<{ slug:
               />
             ))}
 
-            <div className="border border-museum-accent/30 rounded-lg p-4 bg-museum-darker">
+            <div className="museum-card p-4">
               <h3 className="font-heading text-base text-white mb-2">Altri edifici</h3>
               {edifici
                 .filter((e) => e.slug !== slug)

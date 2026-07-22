@@ -12,7 +12,7 @@ import Logo from './Logo';
 
 const Footer = () => {
   return (
-    <footer className="bg-museum-darker border-t border-museum-accent/30 pt-16 pb-8 text-white/70 font-body">
+    <footer className="bg-museum-darker museum-edge-top pt-16 pb-8 text-white/70 font-body">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Logo & Info */}

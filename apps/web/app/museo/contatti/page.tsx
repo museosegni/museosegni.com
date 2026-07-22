@@ -17,7 +17,7 @@ export default async function MuseoContattiPage() {
           {activeNotices.map((notice, idx) => (
             <div
               key={idx}
-              className="flex items-start gap-3 border border-museum-accent/40 rounded-lg p-4 bg-museum-accent/10"
+              className="flex items-start gap-3 rounded-lg p-4 bg-museum-accent/10 ring-1 ring-inset ring-museum-accent/30"
             >
               <AlertCircle className="w-5 h-5 text-museum-accent mt-0.5 shrink-0" />
               <p className="text-white font-body text-sm">
@@ -33,7 +33,7 @@ export default async function MuseoContattiPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Contact Info */}
         <div className="lg:col-span-1 space-y-4">
-          <div className="border border-museum-accent/30 rounded-lg p-5 bg-museum-darker neon-card-glow">
+          <div className="museum-card p-5">
             <h3 className="font-heading text-lg text-white mb-4 flex items-center gap-2">
               <MapPin className="w-5 h-5 text-museum-accent" />
               Indirizzo
@@ -41,7 +41,7 @@ export default async function MuseoContattiPage() {
             <p className="text-white/80 text-sm font-body">{siteSettings?.address}</p>
           </div>
 
-          <div className="border border-museum-accent/30 rounded-lg p-5 bg-museum-darker neon-card-glow">
+          <div className="museum-card p-5">
             <h3 className="font-heading text-lg text-white mb-4 flex items-center gap-2">
               <Phone className="w-5 h-5 text-museum-accent" />
               Telefono
@@ -49,7 +49,7 @@ export default async function MuseoContattiPage() {
             <p className="text-white/80 text-sm font-body">{siteSettings?.phone}</p>
           </div>
 
-          <div className="border border-museum-accent/30 rounded-lg p-5 bg-museum-darker neon-card-glow">
+          <div className="museum-card p-5">
             <h3 className="font-heading text-lg text-white mb-4 flex items-center gap-2">
               <Mail className="w-5 h-5 text-museum-accent" />
               Email
@@ -71,7 +71,7 @@ export default async function MuseoContattiPage() {
 
         {/* Hours */}
         <div className="lg:col-span-2 space-y-4">
-          <div className="border border-museum-accent/30 rounded-lg p-5 bg-museum-darker neon-card-glow">
+          <div className="museum-card p-5">
             <h3 className="font-heading text-lg text-white mb-4 flex items-center gap-2">
               <Clock className="w-5 h-5 text-museum-accent" />
               Orari di apertura
@@ -94,7 +94,7 @@ export default async function MuseoContattiPage() {
             <p className="text-white/50 text-xs font-body mt-4">* {siteSettings?.holidayNote}</p>
           </div>
 
-          <div className="border border-museum-accent/30 rounded-lg p-5 bg-museum-darker neon-card-glow">
+          <div className="museum-card p-5">
             <h3 className="font-heading text-lg text-white mb-4 flex items-center gap-2">
               <Ticket className="w-5 h-5 text-museum-accent" />
               Biglietti
@@ -107,7 +107,7 @@ export default async function MuseoContattiPage() {
             </div>
           </div>
 
-          <div className="border border-museum-accent/30 rounded-lg p-5 bg-museum-darker neon-card-glow">
+          <div className="museum-card p-5">
             <h3 className="font-heading text-lg text-white mb-4 flex items-center gap-2">
               <Car className="w-5 h-5 text-museum-accent" />
               Come arrivare

@@ -29,14 +29,14 @@ export default async function ItinerariPage() {
             <Link
               key={sito.slug}
               href={`/itinerari/${sito.slug}`}
-              className="group block border border-museum-accent/30 rounded-lg overflow-hidden hover:border-museum-accent transition-colors bg-museum-darker"
+              className="group block museum-card museum-interactive overflow-hidden"
             >
               <SiteImage
                 media={sito.heroImage}
                 preset="card-4-3"
                 alt={sito.title}
                 label={sito.title}
-                className="border-0 rounded-none"
+                className="rounded-none"
               />
               <div className="p-5">
                 <div className="flex items-center justify-between">
@@ -53,7 +53,7 @@ export default async function ItinerariPage() {
           ))}
         </div>
 
-        <div className="mt-12 border border-museum-accent/30 rounded-lg p-6 bg-museum-darker">
+        <div className="mt-12 museum-panel p-6">
           <div className="flex items-start gap-4">
             <Map className="w-6 h-6 text-museum-accent mt-1" />
             <div>

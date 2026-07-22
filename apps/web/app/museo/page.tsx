@@ -61,19 +61,19 @@ export default async function MuseoPage() {
       {/* Info Cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-          <div className="border border-museum-accent/30 rounded-lg p-4 bg-museum-darker neon-card-glow">
+          <div className="museum-card p-4">
             <MapPin className="w-5 h-5 text-museum-accent mb-2" />
             <p className="text-white/80 text-xs font-body">{siteSettings?.address}</p>
           </div>
-          <div className="border border-museum-accent/30 rounded-lg p-4 bg-museum-darker neon-card-glow">
+          <div className="museum-card p-4">
             <Phone className="w-5 h-5 text-museum-accent mb-2" />
             <p className="text-white/80 text-xs font-body">{siteSettings?.phone}</p>
           </div>
-          <div className="border border-museum-accent/30 rounded-lg p-4 bg-museum-darker neon-card-glow">
+          <div className="museum-card p-4">
             <Mail className="w-5 h-5 text-museum-accent mb-2" />
             <p className="text-white/80 text-xs font-body">{siteSettings?.email}</p>
           </div>
-          <div className="border border-museum-accent/30 rounded-lg p-4 bg-museum-darker neon-card-glow">
+          <div className="museum-card p-4">
             <Clock className="w-5 h-5 text-museum-accent mb-2" />
             <p className="text-white/80 text-xs font-body">{hours ? `${hours.days}: ${hours.hours}` : ''}</p>
           </div>
@@ -116,7 +116,7 @@ export default async function MuseoPage() {
             <Link
               key={page.path}
               href={page.path}
-              className="group flex items-start gap-4 border border-museum-accent/30 rounded-lg p-5 bg-museum-darker hover:border-museum-accent transition-colors neon-card-glow"
+              className="group flex items-start gap-4 museum-card museum-interactive p-5"
             >
               <div className="p-2.5 rounded-md bg-museum-accent/10 text-museum-accent">
                 <page.icon className="w-6 h-6" />

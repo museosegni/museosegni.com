@@ -57,7 +57,7 @@ export default async function Home() {
           {home?.introText}
         </p>
         {home?.quoteText && (
-          <blockquote className="border-l-2 border-museum-accent/60 pl-4 mb-10 max-w-4xl">
+          <blockquote className="museum-quote-rule pl-4 mb-10 max-w-4xl">
             <p className="text-white/70 font-body text-base italic leading-relaxed">{home.quoteText}</p>
             {home?.quoteSource && (
               <cite className="block mt-2 text-white/50 font-body text-sm not-italic">{home.quoteSource}</cite>
@@ -72,14 +72,14 @@ export default async function Home() {
               <Link
                 key={card.title}
                 href={link?.path ?? '/museo'}
-                className="group block border border-museum-accent/30 rounded-lg overflow-hidden hover:border-museum-accent transition-colors bg-museum-darker neon-card-glow"
+                className="group block museum-card museum-interactive overflow-hidden"
               >
                 <SiteImage
                   media={card.image}
                   preset="card-4-3"
                   alt={card.title}
                   label={card.title}
-                  className="border-0 rounded-none"
+                  className="rounded-none"
                 />
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
@@ -97,14 +97,14 @@ export default async function Home() {
       </section>
 
       {/* News Section */}
-      <section className="bg-museum-darker border-y border-museum-accent/20 py-12 sm:py-16">
+      <section className="bg-museum-darker museum-edge-y py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="font-heading text-2xl sm:text-3xl text-white mb-8">
             <span className="text-museum-accent">News</span> e Eventi
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {(home?.newsItems ?? []).map((news, idx) => (
-              <div key={idx} className="border border-museum-accent/30 rounded-lg p-5 bg-museum-dark hover:border-museum-accent/60 transition-colors neon-card-glow">
+              <div key={idx} className="museum-card museum-interactive p-5">
                 <div className="flex items-center gap-2 text-museum-accent text-xs font-body mb-3">
                   <CalendarDays className="w-3.5 h-3.5" />
                   {news.date}
@@ -124,7 +124,7 @@ export default async function Home() {
             <h2 className="font-heading text-2xl sm:text-3xl text-white mb-6">
               <span className="text-museum-accent">Orari</span> e Contatti
             </h2>
-            <div className="border border-museum-accent/30 rounded-lg p-6 bg-museum-darker space-y-4 neon-card-glow">
+            <div className="museum-panel p-6 space-y-4">
               <div className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-museum-accent mt-0.5" />
                 <div>

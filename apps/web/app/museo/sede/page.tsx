@@ -23,13 +23,13 @@ export default async function MuseoSedePage() {
           preset="card-4-3"
           alt="Palazzo della Comunità - Esterno"
           label="Palazzo della Comunità - Esterno"
-          className="rounded-lg neon-card-glow"
+          className="museum-frame"
         />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
         {(sede?.factCards ?? []).map((card) => (
-          <div key={card.title} className="border border-museum-accent/30 rounded-lg p-6 bg-museum-darker neon-card-glow">
+          <div key={card.title} className="museum-panel p-6">
             <h3 className="font-heading text-xl text-white mb-3">{card.title}</h3>
             <p className="text-white/60 text-sm font-body">{card.description}</p>
           </div>
@@ -41,7 +41,7 @@ export default async function MuseoSedePage() {
         preset="banner-21-9"
         alt="Interni del Museo - Sale espositive"
         label="Interni del Museo - Sale espositive"
-        className="rounded-lg neon-card-glow mb-10"
+        className="museum-frame mb-10"
       />
     </section>
   );

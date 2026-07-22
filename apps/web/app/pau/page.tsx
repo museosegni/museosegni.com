@@ -42,7 +42,7 @@ export default async function PauPage() {
             <h3 className="font-heading text-xl text-white pt-4">Gli obiettivi del PAU</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {(pau?.objectives ?? []).map((item) => (
-                <div key={item.title} className="border border-museum-accent/20 rounded-md p-4 bg-museum-darker">
+                <div key={item.title} className="museum-chip p-4">
                   <p className="text-museum-accent font-body text-sm font-semibold mb-1">{item.title}</p>
                   <p className="text-white/70 text-xs font-body">{item.description}</p>
                 </div>

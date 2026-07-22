@@ -18,7 +18,7 @@ export default function BookingForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="border border-museum-accent/30 rounded-lg p-6 bg-museum-darker space-y-4">
+    <form onSubmit={handleSubmit} className="museum-panel p-6 space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-white/80 text-sm font-body mb-1.5">Nome e cognome</label>
@@ -27,7 +27,7 @@ export default function BookingForm() {
             required
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full bg-museum-dark border border-museum-accent/30 rounded-md px-3 h-[42px] text-white text-base font-body focus:border-museum-accent focus:outline-none"
+            className="museum-field px-3 h-[42px] text-base"
             placeholder="Mario Rossi"
           />
         </div>
@@ -38,7 +38,7 @@ export default function BookingForm() {
             required
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full bg-museum-dark border border-museum-accent/30 rounded-md px-3 h-[42px] text-white text-base font-body focus:border-museum-accent focus:outline-none"
+            className="museum-field px-3 h-[42px] text-base"
             placeholder="mario@esempio.it"
           />
         </div>
@@ -51,7 +51,7 @@ export default function BookingForm() {
             required
             value={formData.date}
             onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-            className="w-full bg-museum-dark border border-museum-accent/30 rounded-md px-3 h-[42px] text-white text-base font-body focus:border-museum-accent focus:outline-none"
+            className="museum-field px-3 h-[42px] text-base"
           />
         </div>
         <div>
@@ -59,7 +59,7 @@ export default function BookingForm() {
           <select
             value={formData.people}
             onChange={(e) => setFormData({ ...formData, people: e.target.value })}
-            className="w-full bg-museum-dark border border-museum-accent/30 rounded-lg px-3 h-[42px] text-white text-base font-body focus:border-museum-accent focus:outline-none"
+            className="museum-field px-3 h-[42px] text-base"
           >
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => (
               <option key={n} value={n} className="bg-museum-dark">{n} {n === 1 ? 'persona' : 'persone'}</option>
@@ -73,7 +73,7 @@ export default function BookingForm() {
           rows={3}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full bg-museum-dark border border-museum-accent/30 rounded-md px-3 py-2 text-white text-sm font-body focus:border-museum-accent focus:outline-none resize-none"
+          className="museum-field px-3 py-2 text-sm resize-none"
           placeholder="Richieste particolari, accessibilità, lingua guida..."
         />
       </div>

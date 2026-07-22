@@ -31,10 +31,12 @@ export default function SiteImage({ media, preset, alt, label, className = '' }:
   const avif = media?.sizes?.[`${preset}-avif`]
   const webp = media?.sizes?.[`${preset}-webp`]
 
+  // Il placeholder non ha bordo proprio: dentro una card lo fornisce gia' il
+  // contenitore, isolato la cornice arriva da `museum-frame` via className.
   if (!avif?.url && !webp?.url) {
     return (
       <div
-        className={`bg-museum-darker border border-museum-accent/40 flex items-center justify-center relative overflow-hidden ${aspect} ${className}`}
+        className={`bg-museum-darker flex items-center justify-center relative overflow-hidden ${aspect} ${className}`}
       >
         <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-museum-accent/20 to-transparent" />
         <div className="text-center z-10 p-4">

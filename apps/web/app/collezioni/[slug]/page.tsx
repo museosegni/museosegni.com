@@ -54,7 +54,7 @@ export default async function CollezionePage({ params }: { params: Promise<{ slu
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
-            <div className="border border-museum-accent/30 rounded-lg p-4 bg-museum-darker">
+            <div className="museum-card p-4">
               <h3 className="font-heading text-base text-white mb-3">Altre collezioni</h3>
               {collezioni
                 .filter((c) => c.slug !== slug)

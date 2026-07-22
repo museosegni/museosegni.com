@@ -47,11 +47,11 @@ export default async function MuseoStoriaPage() {
         </div>
       </div>
 
-      <div className="mt-12 border border-museum-accent/30 rounded-lg p-6 bg-museum-darker">
+      <div className="mt-12 museum-panel p-6">
         <h3 className="font-heading text-xl text-white mb-4">Il percorso espositivo attuale</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {(storia?.sale ?? []).map((sala) => (
-            <div key={sala.title} className="border border-museum-accent/20 rounded-md p-3 bg-museum-dark">
+            <div key={sala.title} className="museum-chip p-3">
               <p className="text-museum-accent font-body text-sm font-semibold">{sala.title}</p>
               <p className="text-white/70 text-xs font-body">{sala.description}</p>
             </div>
