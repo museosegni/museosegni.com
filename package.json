@@ -5,6 +5,8 @@
   "description": "Vite/React (Vercel) + Payload CMS (VPS, Postgres) — sito Museo di Segni",
   "packageManager": "pnpm@11.5.3",
   "scripts": {
+    "build": "pnpm --filter web build && cp -r apps/web/public apps/web/.next/standalone/apps/web/public && cp -r apps/web/.next/static apps/web/.next/standalone/apps/web/.next/static",
+    "start": "node server.js",
     "web:dev": "pnpm --filter web dev",
     "web:build": "pnpm --filter web build",
     "cms:dev": "pnpm --filter cms dev",

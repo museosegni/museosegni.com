@@ -43,6 +43,9 @@ const legacyPages: Record<string, string> = {
 }
 
 const nextConfig: NextConfig = {
+  // Build autonomo (server + sole dipendenze necessarie) per l'hosting Node.js
+  // di Hostinger: lo avvia server.js nella radice del repo.
+  output: 'standalone',
   // Next toglie prima lo slash finale dei vecchi URL (/storia/ -> /storia), poi applica questi.
   async redirects() {
     return Object.entries(legacyPages).map(([slug, destination]) => ({
