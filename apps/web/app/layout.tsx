@@ -1,20 +1,22 @@
 import type { Metadata } from 'next';
-import { Cormorant, Libre_Franklin } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const cormorant = Cormorant({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
+// Font variabili (subset latin) inclusi nel repo invece di next/font/google:
+// il build su Hostinger non riesce a scaricarli da Google durante la build.
+const cormorant = localFont({
+  src: [
+    { path: './fonts/cormorant-latin.woff2', weight: '400 700', style: 'normal' },
+    { path: './fonts/cormorant-italic-latin.woff2', weight: '400 700', style: 'italic' },
+  ],
   variable: '--font-cormorant',
   display: 'swap',
 });
 
-const libreFranklin = Libre_Franklin({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+const libreFranklin = localFont({
+  src: [{ path: './fonts/libre-franklin-latin.woff2', weight: '300 700', style: 'normal' }],
   variable: '--font-libre-franklin',
   display: 'swap',
 });
