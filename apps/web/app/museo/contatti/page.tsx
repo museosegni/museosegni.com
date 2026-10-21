@@ -1,4 +1,4 @@
-import { Clock, Phone, Mail, MapPin, Train, Car, Ticket, AlertCircle } from 'lucide-react';
+import { Clock, Phone, Mail, MapPin, Ticket, AlertCircle } from 'lucide-react';
 import { getMuseoContatti, getSiteSettings } from '@/lib/payload';
 
 export default async function MuseoContattiPage() {
@@ -104,24 +104,6 @@ export default async function MuseoContattiPage() {
                 <span className="text-white/70">Ingresso</span>
                 <span className="text-museum-accent font-semibold text-lg">{siteSettings?.ticketPrice}</span>
               </div>
-            </div>
-          </div>
-
-          <div className="museum-card p-5">
-            <h3 className="font-heading text-lg text-white mb-4 flex items-center gap-2">
-              <Car className="w-5 h-5 text-museum-accent" />
-              Come arrivare
-            </h3>
-            <div className="space-y-3">
-              {(siteSettings?.howToArrive ?? []).map((item, idx) => {
-                const Icon = item.mode === 'train' ? Train : Car;
-                return (
-                  <div key={idx} className="flex items-start gap-3">
-                    <Icon className="w-4 h-4 text-museum-accent mt-1" />
-                    <p className="text-white/80 text-sm font-body">{item.description}</p>
-                  </div>
-                );
-              })}
             </div>
           </div>
         </div>

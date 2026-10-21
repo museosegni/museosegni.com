@@ -150,7 +150,6 @@ export interface SiteSettings {
   openingHours?: { days?: string | null; hours?: string | null; closed?: boolean }[]
   holidayNote?: string | null
   ticketPrice?: string | null
-  howToArrive?: { mode: 'car' | 'train'; description?: string | null }[]
   regolamentoPdf?: MediaDoc | null
   cartaServiziPdf?: MediaDoc | null
 }

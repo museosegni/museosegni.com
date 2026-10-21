@@ -9,7 +9,7 @@ export default async function ItinerariPage() {
   return (
     <>
       <section className="relative">
-        <SiteImage preset="hero-16-9" alt="Itinerari: Siti del Parco" label="Itinerari: Siti del Parco" className="w-full" />
+        <SiteImage media={sitiArcheologici[0]?.heroImage} preset="hero-16-9" alt="Itinerari: Siti del Parco" label="Itinerari: Siti del Parco" className="w-full" />
         <div className="absolute inset-0 bg-gradient-to-t from-museum-dark via-museum-dark/60 to-transparent" />
         <div className="absolute inset-0 flex items-end">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14 w-full">
@@ -57,15 +57,13 @@ export default async function ItinerariPage() {
           <div className="flex items-start gap-4">
             <Map className="w-6 h-6 text-museum-accent mt-1" />
             <div>
-              <h3 className="font-heading text-lg text-white mb-2">Percorso archeologico consigliato</h3>
+              <h3 className="font-heading text-lg text-white mb-2">Come visitare il Parco</h3>
               <p className="text-white/70 text-sm font-body leading-relaxed mb-4">
-                Il percorso ideale per visitare tutti i siti in una giornata parte dall&apos;Acropoli,
-                scende verso l&apos;Area del Foro, prosegue per il Complesso Santa Lucia e il Tempio d&apos;Ercole,
-                per poi concludersi con le Mura Poligonali e il Ninfeo di Q. Mutius. Durata stimata: 4-5 ore.
+                Per la visita al Parco Archeologico, nelle aree come il Ninfeo, bisogna rivolgersi alla
+                biglietteria del Museo. Il Ninfeo è visitabile dalle 9.00 alle 13.00, con ultima visita
+                alle 12.30.
               </p>
-              <p className="text-white/50 text-xs font-body">
-                È consigliata la prenotazione di una guida per una visita completa.
-              </p>
+              <p className="text-white/50 text-xs font-body">Si consiglia la prenotazione.</p>
             </div>
           </div>
         </div>

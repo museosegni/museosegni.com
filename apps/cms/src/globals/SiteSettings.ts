@@ -56,15 +56,6 @@ export const SiteSettings: GlobalConfig = {
       defaultValue: 'Chiuso il 25 dicembre, 1 gennaio e 1 maggio. Orari speciali durante le festività.',
     },
     { name: 'ticketPrice', type: 'text', localized: true, defaultValue: 'Gratuito' },
-    {
-      name: 'howToArrive',
-      type: 'array',
-      labels: { singular: 'Indicazione', plural: 'Come arrivare' },
-      fields: [
-        { name: 'mode', type: 'select', options: ['car', 'train'], required: true },
-        { name: 'description', type: 'textarea', localized: true },
-      ],
-    },
     { name: 'regolamentoPdf', type: 'upload', relationTo: 'media', label: 'Regolamento (PDF)' },
     { name: 'cartaServiziPdf', type: 'upload', relationTo: 'media', label: 'Carta dei Servizi (PDF)' },
   ],

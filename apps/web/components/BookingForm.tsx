@@ -1,8 +1,9 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 
-export default function BookingForm() {
+export default function BookingForm({ email }: { email: string }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,10 +12,21 @@ export default function BookingForm() {
     message: '',
   });
 
+  // Nessun backend di prenotazione: la richiesta parte come email precompilata
+  // dal client di posta del visitatore verso l'indirizzo del museo.
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Grazie per la tua prenotazione! Ti contatteremo presto.');
-    setFormData({ name: '', email: '', date: '', people: '1', message: '' });
+    const body = [
+      `Nome e cognome: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Data della visita: ${formData.date}`,
+      `Numero persone: ${formData.people}`,
+      formData.message && `Note: ${formData.message}`,
+    ]
+      .filter(Boolean)
+      .join('\n');
+    const subject = `Richiesta di prenotazione visita - ${formData.name}`;
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -77,12 +89,25 @@ export default function BookingForm() {
           placeholder="Richieste particolari, accessibilità, lingua guida..."
         />
       </div>
+      <label className="flex items-start gap-2 text-white/70 text-xs font-body">
+        <input type="checkbox" required className="mt-0.5 accent-museum-accent" />
+        <span>
+          Ho letto l&apos;
+          <Link href="/privacy" className="text-museum-accent hover:underline">
+            informativa privacy
+          </Link>{' '}
+          e acconsento al trattamento dei miei dati per comunicare e confermare la prenotazione della visita.
+        </span>
+      </label>
       <button
         type="submit"
         className="w-full bg-museum-accent text-museum-dark font-body font-semibold py-2.5 rounded-md hover:bg-museum-accent-light transition-colors text-sm"
       >
         Invia richiesta di prenotazione
       </button>
+      <p className="text-white/50 text-xs font-body">
+        Si aprirà il tuo programma di posta con la richiesta già compilata per {email}.
+      </p>
     </form>
   );
 }

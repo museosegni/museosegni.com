@@ -1036,13 +1036,6 @@ export interface SiteSetting {
     | null;
   holidayNote?: string | null;
   ticketPrice?: string | null;
-  howToArrive?:
-    | {
-        mode: 'car' | 'train';
-        description?: string | null;
-        id?: string | null;
-      }[]
-    | null;
   regolamentoPdf?: (number | null) | Media;
   cartaServiziPdf?: (number | null) | Media;
   updatedAt?: string | null;
@@ -1267,13 +1260,6 @@ export interface SiteSettingsSelect<T extends boolean = true> {
       };
   holidayNote?: T;
   ticketPrice?: T;
-  howToArrive?:
-    | T
-    | {
-        mode?: T;
-        description?: T;
-        id?: T;
-      };
   regolamentoPdf?: T;
   cartaServiziPdf?: T;
   updatedAt?: T;

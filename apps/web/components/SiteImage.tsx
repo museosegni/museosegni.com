@@ -31,9 +31,14 @@ export default function SiteImage({ media, preset, alt, label, className = '' }:
   const avif = media?.sizes?.[`${preset}-avif`]
   const webp = media?.sizes?.[`${preset}-webp`]
 
+  // Payload non genera il preset se l'originale è più piccolo del formato
+  // (es. le foto da 750px importate dal vecchio sito): in quel caso si usa
+  // l'originale, ritagliato nel riquadro via object-cover.
+  const original = media?.url
+
   // Il placeholder non ha bordo proprio: dentro una card lo fornisce gia' il
   // contenitore, isolato la cornice arriva da `museum-frame` via className.
-  if (!avif?.url && !webp?.url) {
+  if (!avif?.url && !webp?.url && !original) {
     return (
       <div
         className={`bg-museum-darker flex items-center justify-center relative overflow-hidden ${aspect} ${className}`}
@@ -52,7 +57,7 @@ export default function SiteImage({ media, preset, alt, label, className = '' }:
       {avif?.url && <source srcSet={mediaUrl(avif.url)} type="image/avif" />}
       {webp?.url && <source srcSet={mediaUrl(webp.url)} type="image/webp" />}
       {/* eslint-disable-next-line @next/next/no-img-element -- AVIF/WebP già pre-generati da Payload, no reprocessing */}
-      <img src={mediaUrl(webp?.url ?? avif?.url ?? media?.url)} alt={alt} className="w-full h-full object-cover" />
+      <img src={mediaUrl(webp?.url ?? avif?.url ?? original)} alt={alt} className="w-full h-full object-cover" />
     </picture>
   )
 }

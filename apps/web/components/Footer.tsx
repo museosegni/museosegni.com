@@ -64,8 +64,9 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-museum-accent shrink-0" />
                 <div>
-                  <p>Mar - Dom: 9:00 - 19:00</p>
-                  <p className="text-xs opacity-60 italic">Lunedì chiuso</p>
+                  <p>Mar, Ven, Sab, Dom: 9:00 - 13:00 / 15:00 - 19:00</p>
+                  <p className="text-xs opacity-60 italic">Lunedì, mercoledì e giovedì chiuso</p>
+                  <p className="mt-2">Ninfeo: 9:00 - 13:00 (ultima visita 12:30)</p>
                 </div>
               </li>
             </ul>
@@ -78,13 +79,13 @@ const Footer = () => {
               Resta aggiornato sulle nostre attività, mostre ed eventi speciali.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-3 rounded-full bg-museum-accent/10 text-museum-accent hover:bg-museum-accent hover:text-museum-dark transition-all" aria-label="Instagram">
+              <a href="https://www.instagram.com/museosegni" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-museum-accent/10 text-museum-accent hover:bg-museum-accent hover:text-museum-dark transition-all" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="p-3 rounded-full bg-museum-accent/10 text-museum-accent hover:bg-museum-accent hover:text-museum-dark transition-all" aria-label="Facebook">
+              <a href="https://www.facebook.com/museosegni" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-museum-accent/10 text-museum-accent hover:bg-museum-accent hover:text-museum-dark transition-all" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="p-3 rounded-full bg-museum-accent/10 text-museum-accent hover:bg-museum-accent hover:text-museum-dark transition-all" aria-label="YouTube">
+              <a href="https://www.youtube.com/@museosegni5454" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-museum-accent/10 text-museum-accent hover:bg-museum-accent hover:text-museum-dark transition-all" aria-label="YouTube">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -97,9 +98,8 @@ const Footer = () => {
             © {new Date().getFullYear()} Museo Archeologico Comunale di Segni. Tutti i diritti riservati.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Cookie Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Accessibilità</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/privacy#cookie" className="hover:text-white transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

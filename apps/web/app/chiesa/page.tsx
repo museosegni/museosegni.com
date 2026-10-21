@@ -9,7 +9,7 @@ export default async function ChiesePage() {
   return (
     <>
       <section className="relative">
-        <SiteImage preset="hero-16-9" alt="Chiesa e Culto" label="Chiesa e Culto" className="w-full" />
+        <SiteImage media={chiese[0]?.heroImage} preset="hero-16-9" alt="Chiesa e Culto" label="Chiesa e Culto" className="w-full" />
         <div className="absolute inset-0 bg-gradient-to-t from-museum-dark via-museum-dark/60 to-transparent" />
         <div className="absolute inset-0 flex items-end">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14 w-full">

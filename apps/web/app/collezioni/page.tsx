@@ -9,7 +9,7 @@ export default async function CollezioniPage() {
   return (
     <>
       <section className="relative">
-        <SiteImage preset="hero-16-9" alt="Collezioni" label="Collezioni" className="w-full" />
+        <SiteImage media={collezioni[0]?.heroImage} preset="hero-16-9" alt="Collezioni" label="Collezioni" className="w-full" />
         <div className="absolute inset-0 bg-gradient-to-t from-museum-dark via-museum-dark/60 to-transparent" />
         <div className="absolute inset-0 flex items-end">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14 w-full">
@@ -57,11 +57,10 @@ export default async function CollezioniPage() {
             <div>
               <h3 className="font-heading text-lg text-white mb-2">Il patrimonio del Museo</h3>
               <p className="text-white/70 text-sm font-body leading-relaxed">
-                Le collezioni del Museo Archeologico Comunale di Segni comprendono migliaia di reperti
-                che coprono un arco cronologico dalla preistoria al Medioevo. I materiali provengono
-                per lo più dalla città antica e dal suo territorio, offrendo un quadro completo della
-                vita quotidiana, della religione, dell&apos;arte e dell&apos;economia di una comunità
-                del Lazio antico.
+                Il percorso espositivo, oltre ad un&apos;ampia ed agevole pannellatura con plastici e
+                ricostruzioni assonometriche, è arricchito da gruppi scultorei di notevole interesse,
+                numerose iscrizioni sacre e funerarie, elementi architettonici decorativi e una vasta
+                collezione di materiale ceramico d&apos;età romana e medievale.
               </p>
             </div>
           </div>
