@@ -59,13 +59,13 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-museum-accent shrink-0" />
-                <span>museo@comune.segni.rm.it</span>
+                <span>info@museosegni.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-museum-accent shrink-0" />
                 <div>
-                  <p>Mar, Ven, Sab, Dom: 9:00 - 13:00 / 15:00 - 19:00</p>
-                  <p className="text-xs opacity-60 italic">Lunedì, mercoledì e giovedì chiuso</p>
+                  <p>Mar, Gio, Ven, Sab, Dom: 9:00 - 13:00 / 15:00 - 19:00</p>
+                  <p className="text-xs opacity-60 italic">Lunedì e mercoledì chiuso</p>
                   <p className="mt-2">Ninfeo: 9:00 - 13:00 (ultima visita 12:30)</p>
                 </div>
               </li>

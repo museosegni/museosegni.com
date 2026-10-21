@@ -165,7 +165,7 @@ export default async function Home() {
             <h2 className="font-heading text-2xl sm:text-3xl text-white mb-6">
               Prenota una <span className="text-museum-accent">Visita</span>
             </h2>
-            <BookingForm email={siteSettings?.email ?? 'museo@comune.segni.rm.it'} />
+            <BookingForm email={siteSettings?.email ?? 'info@museosegni.com'} />
           </div>
         </div>
       </section>

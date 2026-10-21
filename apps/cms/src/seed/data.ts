@@ -838,7 +838,7 @@ export const museoServizi = {
   ],
   researchSectionTitle: 'Biblioteca e archivio',
   researchText:
-    'La biblioteca specialistica e l’archivio del museo sono consultabili su prenotazione: per informazioni telefonare al numero 06-97260072 oppure scrivere a museo@comune.segni.rm.it.',
+    'La biblioteca specialistica e l’archivio del museo sono consultabili su prenotazione: per informazioni telefonare al numero 06-97260072 oppure scrivere a info@museosegni.com.',
 }
 
 // Il vecchio sito non elenca pubblicazioni né articoli in vendita: la pagina
@@ -870,9 +870,9 @@ export const pau = {
 export const siteSettings = {
   address: 'Via Lauri, 1 - Segni (RM) 00037',
   phone: '+39 069 72 600 72',
-  email: 'museo@comune.segni.rm.it',
+  email: 'info@museosegni.com',
   emails: [
-    { label: 'Museo', email: 'museo@comune.segni.rm.it' },
+    { label: 'Museo', email: 'info@museosegni.com' },
     { label: 'Direzione', email: 'fedcolaiacomo@comune.segni.rm.it' },
     { label: 'Amici del Museo', email: 'amicidelmuseosegni@gmail.com' },
   ],
@@ -898,9 +898,9 @@ export const siteSettings = {
     },
   ],
   openingHours: [
-    { days: 'Martedì, Venerdì', hours: '9.00 - 13.00 / 15.00 - 19.00', closed: false },
+    { days: 'Martedì, Giovedì, Venerdì', hours: '9.00 - 13.00 / 15.00 - 19.00', closed: false },
     { days: 'Sabato e domenica', hours: '9.00 - 13.00 / 15.00 - 19.00', closed: false },
-    { days: 'Lunedì, Mercoledì, Giovedì', hours: '', closed: true },
+    { days: 'Lunedì, Mercoledì', hours: '', closed: true },
     { days: 'Ninfeo di Q. Mutius', hours: '9.00 - 13.00 (ultima visita 12.30)', closed: false },
   ],
   holidayNote: 'Ferragosto: 10.00 - 13.00 / 16.00 - 18.30.',
