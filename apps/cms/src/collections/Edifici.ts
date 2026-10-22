@@ -8,6 +8,7 @@ export const Edifici: CollectionConfig = {
   slug: 'edifici',
   labels: { singular: 'Edificio', plural: 'Edifici' },
   admin: {
+    group: 'PAU Segni Città-Museo',
     useAsTitle: 'title',
     defaultColumns: ['title', 'subtitle'],
   },

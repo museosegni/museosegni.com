@@ -59,11 +59,13 @@ export default async function ItinerariPage() {
             <div>
               <h3 className="font-heading text-lg text-white mb-2">Come visitare il Parco</h3>
               <p className="text-white/70 text-sm font-body leading-relaxed mb-4">
-                Per la visita al Parco Archeologico, nelle aree come il Ninfeo, bisogna rivolgersi alla
-                biglietteria del Museo. Il Ninfeo è visitabile dalle 9.00 alle 13.00, con ultima visita
-                alle 12.30.
+                Alcune aree del Parco Archeologico, come il Ninfeo, sono chiuse a chiave e si visitano
+                solo su prenotazione. Basta chiamare il Museo o contattarci per fissare una visita
+                durante gli orari di apertura del Museo.
               </p>
-              <p className="text-white/50 text-xs font-body">Si consiglia la prenotazione.</p>
+              <Link href="/museo/contatti" className="text-museum-accent text-xs font-body hover:underline">
+                Contatti e prenotazioni
+              </Link>
             </div>
           </div>
         </div>

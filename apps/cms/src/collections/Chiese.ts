@@ -8,6 +8,7 @@ export const Chiese: CollectionConfig = {
   slug: 'chiese',
   labels: { singular: 'Chiesa', plural: 'Chiese' },
   admin: {
+    group: 'PAU Segni Città-Museo',
     useAsTitle: 'title',
     defaultColumns: ['title', 'subtitle'],
   },

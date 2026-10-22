@@ -66,7 +66,7 @@ const Footer = () => {
                 <div>
                   <p>Mar, Gio, Ven, Sab, Dom: 9:00 - 13:00 / 15:00 - 19:00</p>
                   <p className="text-xs opacity-60 italic">Lunedì e mercoledì chiuso</p>
-                  <p className="mt-2">Ninfeo: 9:00 - 13:00 (ultima visita 12:30)</p>
+                  <p className="mt-2">Ninfeo: solo 24 e 25 ottobre, 9:00 - 13:00 (ultima visita 12:30)</p>
                 </div>
               </li>
             </ul>

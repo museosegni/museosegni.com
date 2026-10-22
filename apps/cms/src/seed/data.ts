@@ -887,7 +887,7 @@ export const siteSettings = {
     {
       title: 'Visita al Parco Archeologico',
       description:
-        'per le aree come il Ninfeo bisogna rivolgersi alla biglietteria del Museo. Il Ninfeo è visitabile dalle 9.00 alle 13.00, con ultima visita alle 12.30; si consiglia la prenotazione.',
+        'il Ninfeo è chiuso a chiave e si visita solo su prenotazione: basta chiamare il Museo o contattarci per fissare una visita durante gli orari di apertura del Museo.',
       active: true,
     },
     {
@@ -901,7 +901,7 @@ export const siteSettings = {
     { days: 'Martedì, Giovedì, Venerdì', hours: '9.00 - 13.00 / 15.00 - 19.00', closed: false },
     { days: 'Sabato e domenica', hours: '9.00 - 13.00 / 15.00 - 19.00', closed: false },
     { days: 'Lunedì, Mercoledì', hours: '', closed: true },
-    { days: 'Ninfeo di Q. Mutius', hours: '9.00 - 13.00 (ultima visita 12.30)', closed: false },
+    { days: 'Ninfeo di Q. Mutius', hours: 'Solo 24 e 25 ottobre: 9.00 - 13.00 (ultima visita 12.30)', closed: false },
   ],
   holidayNote: 'Ferragosto: 10.00 - 13.00 / 16.00 - 18.30.',
   ticketPrice: 'Gratuito',

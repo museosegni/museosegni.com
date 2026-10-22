@@ -8,8 +8,9 @@ import { HERO_16_9, CARD_4_3 } from '../lib/imageDims'
 // referenziano gli stessi siti archeologici (mura, ninfeo, acropoli...).
 export const SitiArcheologici: CollectionConfig = {
   slug: 'siti-archeologici',
-  labels: { singular: 'Sito archeologico', plural: 'Siti archeologici' },
+  labels: { singular: 'Sito del Parco', plural: 'Siti del Parco (Itinerari)' },
   admin: {
+    group: 'PAU Segni Città-Museo',
     useAsTitle: 'title',
     defaultColumns: ['title', 'subtitle'],
     description: 'Itinerari/siti archeologici della città (mura, ninfeo, acropoli, ecc.).',

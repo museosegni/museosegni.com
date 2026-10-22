@@ -5,7 +5,8 @@ import { HERO_16_9, CARD_4_3 } from '../lib/imageDims'
 
 export const Pau: GlobalConfig = {
   slug: 'pau',
-  label: 'PAU Segni Città-Museo',
+  label: 'Pagina PAU',
+  admin: { group: 'PAU Segni Città-Museo' },
   access: publicReadAuthWrite,
   fields: [
     { name: 'heroTitle', type: 'text', localized: true, defaultValue: 'PAU' },
